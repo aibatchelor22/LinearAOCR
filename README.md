@@ -18,15 +18,16 @@ Source
   Nobody has ever created optical character recognition software for this set.  However, unicode values have been assigned to the characters and these are the basis I used for class identifiers.  Rob Hogan has constructed a very useful set of annotated data, including transcriptions.  I was able to use this set of data to construct a dictionary of images of clay tablets inscribed with Linear A, along with bounding box data for each character and its unicode value.  I did some cleaning to remove stop characters (e.g. punctuation and spaces) from the inscription data and matched each character with a single bounding box.  I also removed annotations that did not match the number of bounding boxes.  When this was complete, my dataset included 1295 images.
 The character set in my corpus had a large class imbalance.  There were 279 unique characters in the cleaned dataset.  Of these, 9 were hapaxes, i.e. they only had one instance.  The most frequent characters had 350 or more instances.  
 
-Methods
-I explored three approaches to recognizing characters.
+## Methods
+  
+  I explored three approaches to recognizing characters.
 First, I used detectron2 software from Meta (Facebook) to create a model using instance recognition.  The model can identify a character and its corresponding bounding box within an image of a clay tablet inscribed with Linear A text.  
  
 Source
  
 Training set example
 
-Second, I used an EfficientNetB0 to classify cropped images of single characters with a convolutional neural network.
+  Second, I used an EfficientNetB0 to classify cropped images of single characters with a convolutional neural network.
  
 Source
          
@@ -39,6 +40,7 @@ Training Image Examples
 ## Results
   
   I evaluated models based on average precision.  The models with a minimum of 20 or 40 instances failed to recognize most of the less frequent characters.  The EfficientNet based models with a minimum of 80 characters performed fairly well, but each model only included 7 character classes.  This is not enough for an optical character recognition tool that includes the 60-70 base characters of Linear A.
+
 Instances(min)	# Classes	Method 1 AP	Method 2 AP	Method 3 AP
 20	45	0.08	0.03	0.04
 40	23	0.08	0.09	0.16
