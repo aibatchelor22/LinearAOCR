@@ -51,15 +51,15 @@ Second, I used an EfficientNetB0 to classify cropped images of single characters
 
 ![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image008.jpg)
 ![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image009.jpg)
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image0010.jpg)
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image0011.jpg)
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image0012.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image010.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image011.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image012.jpg)
 
 Training image examples
 
 Third, I used a shared encoder neural network with an EfficentNetB0 base model to classify cropped images of single characters using a pair of convolutional neural networks to perform "few-shot" detection, a useful techique for very small training datasets. Such an implementation is described by [Mehmood et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7071616/). For each image, two different augmentations are applied. The two augmented images are each input to an EfficentNetB0 base model which does not include the default dense layers. The logits are input to a max pool layer to create embeddings. The two embeddings are concatenated and input to a series of two dense layers, and finally input to a softmax layer for classification. For validation and testing, I used one image without augmentation and one image with augmentation as inputs.
 
-![](RackMultipart20221023-1-awki08_html_79359d363c1d48a5.png)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image013.jpg)
 
 I tested each model with three different values for the minimum number of instances for each class, more specifically, 20, 40, and 80 instances. A higher number for this value meant a smaller number of classes represented in the data.
 
