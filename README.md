@@ -12,7 +12,8 @@ I derived my dataset from "[LinearA Explorer](https://github.com/mwenge/LinearAE
 
 Linguists have drawn parallels between analagous characters in the Minoan Linear B language. Unlike Linear A, Linear B has been deciphered as Mycenaean Greek. The Linear A character set has been mapped into 384 [unicode signifiers](https://en.wikipedia.org/wiki/Linear_A_(Unicode_block)). Of these, 31 are Linear B analogues. A total of 28 of these linear B analogues were present in my full dataset. It is estimated that 60-70 of the characters of Linear A are phonetic and the remainder are numbers and ideograms. Linear A primarily appears to be written from left to right. However, some texts are written from right to left, or as boustrophedon, i.e. lines of alternating direction "as the ox plows." In some cases, the text may even be written in spirals.
 
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image002.png) ![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image003.png)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image002.png) 
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image003.png)
 
 [Source](https://en.wikipedia.org/wiki/Linear_A)
 
@@ -48,7 +49,11 @@ Second, I used an EfficientNetB0 to classify cropped images of single characters
 
 [Source](https://www.researchgate.net/figure/The-EfficientNetB0-network-architecture_fig8_346296594)
 
-![](RackMultipart20221023-1-awki08_html_ddfcc4e57a2d913d.jpg) ![](RackMultipart20221023-1-awki08_html_409162dc7dff1fba.jpg) ![](RackMultipart20221023-1-awki08_html_cc92892ebd92a649.jpg) ![](RackMultipart20221023-1-awki08_html_56492f7b5a1b774.jpg) ![](RackMultipart20221023-1-awki08_html_7034a28a844f7ff5.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image008.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image009.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image0010.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image0011.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image0012.jpg)
 
 Training image examples
 
