@@ -1,6 +1,6 @@
 # **Linguistic Labyrinths and Minotaurs, Linear A Optical Character Recognition**
 
-![](RackMultipart20221023-1-awki08_html_4e029d7134f039df.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image001.jpg)
 
 Palace of Knossos, Crete
 
