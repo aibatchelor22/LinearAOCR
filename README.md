@@ -12,13 +12,13 @@ I derived my dataset from "[LinearA Explorer](https://github.com/mwenge/LinearAE
 
 Linguists have drawn parallels between analagous characters in the Minoan Linear B language. Unlike Linear A, Linear B has been deciphered as Mycenaean Greek. The Linear A character set has been mapped into 384 [unicode signifiers](https://en.wikipedia.org/wiki/Linear_A_(Unicode_block)). Of these, 31 are Linear B analogues. A total of 28 of these linear B analogues were present in my full dataset. It is estimated that 60-70 of the characters of Linear A are phonetic and the remainder are numbers and ideograms. Linear A primarily appears to be written from left to right. However, some texts are written from right to left, or as boustrophedon, i.e. lines of alternating direction "as the ox plows." In some cases, the text may even be written in spirals.
 
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image002.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image002.png) ![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image003.png)
 
 [Source](https://en.wikipedia.org/wiki/Linear_A)
 
 Researchers at the Oriental Institute of the University of Chicago conducting the [DeepScribe](https://datascience.uchicago.edu/news/ancient-language-processing-teaching-computers-to-read-cuneiform-tablets/) project have explored methods of character recognition for clay tablets of Elamite cuneiform excavated from the Persepolis site in Iran. Their dataset included 6000 annotated images of clay tablets with over 100,000 characters. Elamite cuneiform script includes 206 character types. The DeepScribe project has primarily explored techniques for recognizing cropped instances of single characters with convolutional neural networks such as ResNet50. They have created models with around 80% accuracy. In addition, they have explored methods of instance detection using detectron2. I used a similar approach with a similar dataset, including annotated images of clay tablets with a comparable number of character types. However, my dataset inlcuded significantly fewer images with significantly fewer characters and therefore presented a unique challenge.
 
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image003.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image004.jpg)
 
 [Source](https://datascience.uchicago.edu/news/ancient-language-processing-teaching-computers-to-read-cuneiform-tablets/)
 
@@ -34,17 +34,17 @@ I explored three approaches to recognizing characters.
 
 First, I used [detectron2](https://github.com/facebookresearch/detectron2) software from Meta (Facebook) to create a model using instance recognition. The model can identify a character and its corresponding bounding box within an image of a clay tablet inscribed with Linear A text.
 
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image004.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image005.jpg)
 
 [Source](https://medium.com/@hirotoschwert/digging-into-detectron-2-47b2e794fabd)
 
-![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image005.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image006.jpg)
 
 Training set example
 
 Second, I used an EfficientNetB0 to classify cropped images of single characters with a convolutional neural network.
 
-![](RackMultipart20221023-1-awki08_html_320db2175f12553c.jpg)
+![](https://github.com/aibatchelor22/LinearAOCR/blob/main/image007.jpg)
 
 [Source](https://www.researchgate.net/figure/The-EfficientNetB0-network-architecture_fig8_346296594)
 
