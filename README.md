@@ -69,6 +69,7 @@ I evaluated models based on average precision. The models with a minimum of 20 o
 
 | Instances(min) | # Classes | Method 1 AP | Method 2 AP | Method 3 AP |
 | --- | --- | --- | --- | --- |
+| 10 | 76 | 0.02 | 0.02 | 0.02 |
 | 20 | 45 | 0.08 | 0.03 | 0.04 |
 | 40 | 23 | 0.08 | 0.09 | 0.16 |
 | 80 | 7 | 0.09 | 0.49 | 0.44 |
