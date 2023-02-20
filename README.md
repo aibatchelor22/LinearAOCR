@@ -74,9 +74,19 @@ I evaluated models based on average precision. The models with a minimum of 20 o
 | 40 | 23 | 0.08 | 0.09 | 0.16 |
 | 80 | 7 | 0.09 | 0.49 | 0.44 |
 
+I explored an additional approach where I used ZCA whitening as preprocessing for Method 2 and Method 3.  Keras has a very convenient tool for this preprocessing in the image_data_loader class.  ZCA whitening improved the results very significantly, especially for Method 2.
+
+| Instances(min) | # Classes | Method 2 AP | Method 3 AP |
+| --- | --- | --- | --- |
+| 10 | 76 | 0.14 | 0.02 |
+| 20 | 45 | 0.26 | 0.07 |
+| 40 | 23 | 0.43 | 0.11 |
+| 80 | 7 | 0.55 | 0.44 |
+
+
 **Conclusions**
 
-It is apparent that the present corpus of Linear A text is too small to create a model for OCR of even the presumed base phonetic set using conventional techniques. Recognition only performed well for characters with 80 or more instances. Either a larger data set or different techniques are warranted. Collection of additional data is limited by archaeological excavation and annotation on the part of researchers and is therefore not a practical option. Other tools that may be worth exploring include "few shot" or "one shot" detection with shared encoders that use either [contrastive loss](https://www.cs.toronto.edu/~hinton/absps/simclr.pdf) or [triplet loss](https://arxiv.org/pdf/1412.6622.pdf). Such techniques have been successful for classification with very few or even single instances of each class in domains including signature verification and facial recognition.
+It is apparent that the present corpus of Linear A text is too small to create a model for OCR of even the presumed base phonetic set using conventional techniques. Recognition only performed well for characters with 80 or more instances. ZCA whitening improved the results very significantly for a conventional EfficientNet classifier, but not enough to create a particularly useful software tool.  Either a larger data set or different techniques are warranted. Collection of additional data is limited by archaeological excavation and annotation on the part of researchers and is therefore not a practical option. One tool that may be promising is semi-supervised learning.  Other tools that may be worth exploring include "few shot" or "one shot" detection with shared encoders that use either [contrastive loss](https://www.cs.toronto.edu/~hinton/absps/simclr.pdf) or [triplet loss](https://arxiv.org/pdf/1412.6622.pdf). Such techniques have been successful for classification with very few or even single instances of each class in domains including signature verification and facial recognition.
 
 **References**
 
