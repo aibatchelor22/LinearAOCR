@@ -6,6 +6,8 @@ Palace of Knossos, Crete
 
 [Source](https://www.lonelyplanet.com/greece/crete/knossos/attractions/palace-of-knossos/a/poi-sig/504778/359431)
 
+**Background**
+
 The Linear A language comes from the Minoan civilization of Crete. Most examples are from clay tablets excavated from sites such as the Palace of Knossos, the site of the labyrinth where the legendary minotaur lived. The language was in use from about 1800 to 1450 BCE. The language has never been deciphered and the known corpus is very small. As of 2002, Schoep et al. note that there were 1,427 known Linear A documents with a total occurrence of 7,362-7,396 characters (Schoep 2002, 38). The SigLA database of Linear A documents hosted by the University of Rennes, France includes approximately 300 distinct character types.
 
 I derived my dataset from "[LinearA Explorer](https://github.com/mwenge/LinearAExplorer/)" created by Rob Hogan. The data therein was sourced from three digitized volumes of Recueil des Inscriptions en Lineair A (Louis Godart and Jean-Pierre Olivie 1970) hosted by Collections de l'Ecole française. After cleaning, my dataset included a corpus of 1,295 documents with a total of 3,530 characters, including 279 distinct character types. My dataset thus included most of the known Linear A documents and the annotations for around half of the known set of text.
