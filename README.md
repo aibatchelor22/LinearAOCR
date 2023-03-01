@@ -76,7 +76,7 @@ I evaluated models based on average precision. The models with a minimum of 20 o
 | 40 | 23 | 0.08 | 0.09 | 0.16 |
 | 80 | 7 | 0.09 | 0.49 | 0.44 |
 
-I explored an additional approach where I used ZCA whitening to preprocess training and validation data for Method 2 and Method 3.  Keras includes a convenient tool for this preprocessing in the ImageDataGenerator class.  ZCA whitening improved the results very significantly, especially for training sets of Method 2 with a smaller number of minimum instances.
+I explored an additional approach where I used ZCA whitening to preprocess training and validation data for Method 2 and Method 3.  Keras includes a convenient tool for this preprocessing in the ImageDataGenerator class.  ZCA whitening improved the results very significantly for Method 2, especially for training sets with a smaller number of minimum instances.  It did not have a significant effect on the results of method 3.
 
 | Instances(min) | # Classes | Method 2 AP | Method 3 AP |
 | --- | --- | --- | --- |
